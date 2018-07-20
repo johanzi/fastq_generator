@@ -20,6 +20,7 @@ sequence_size = length of the sequence in bp (integer)
 
 ```
 python fastq_generator.py generate_fasta Chr1 1000 > chr1.fa
+
 cat chr1.fa
 
 >Chr1
@@ -93,6 +94,7 @@ coverage = number of reads covering each bp (integer)
 python fastq_generator.py generate_mapped_fastq_SE chr1.fa 100 2 > chr1_SE.fastq
 
 head chr1_SE.fastq
+
 @FAKE-SEQ:1:FAKE-FLOWCELL-ID:1:1:0:1 1:N:0:ATGT
 CGTTGCTCTGAATAGGCCGGGAGGACGACTAGGCCGATTCCACGAACTGCACAGCGCCTATAATTTAGAAGGCGGGCACTGGAGATCTAAGATGGTTTTG
 +
@@ -129,6 +131,7 @@ coverage = number of reads covering each bp (integer)
 python fastq_generator.py generate_mapped_fastq_PE chr1.fa 100  100 2 > chr1_PE.fastq
 
 head chr1_PE.fastq
+
 @FAKE-SEQ:1:FAKE-FLOWCELL-ID:1:1:0:1#0/1
 GCGTTGCTCTGAATAGGCCGGGAGGACGACTAGGCCGATTCCACGAACTGCACAGCGCCTATAATTTAGAAGGCGGGCACTGGAGATCTAAGATGGTTTT
 +
