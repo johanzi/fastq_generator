@@ -1,6 +1,6 @@
 # fastq_generator
 A suite of tools to generate random or mapped fastq files.
-The script was developed for python2.7.
+The script is compatible with python2.7 and python3.4.
 
 
 ## Usage
