@@ -32,8 +32,8 @@ def generate_DNA(sequence_size):
 
 
 def generate_fasta(name_seq, sequence_size):
-    print '>'+name_seq
-    print generate_DNA(sequence_size)
+    print('>'+name_seq)
+    print(generate_DNA(sequence_size))
 
 
 def reverse_complement(sequence):
@@ -54,10 +54,10 @@ def generate_fastq(sequence, header="@FAKE-SEQ:1:FAKE-FLOWCELL-ID:1:1:0:1297 1:N
     #header = "@FAKE-SEQ:1:FAKE-FLOWCELL-ID:1:1:0:1297 1:N:0:TGACCAAT"
     # Assuming best quality Phred score for Illumina 1.8+
     quality = len(sequence) * 'I'
-    print header
-    print sequence
-    print '+'
-    print quality
+    print(header)
+    print(sequence)
+    print('+')
+    print(quality)
 
 
 def generate_random_fastq_SE(sequence_size, nb_seq):
@@ -109,7 +109,7 @@ def generate_mapped_fastq_SE(ref_fasta, sequence_size, coverage):
             list_seq.append(seq)
 
     #Remove empty line if there is
-    list_seq = filter(None, list_seq)
+    list_seq = [_f for _f in list_seq if _f]
     
 
 
@@ -153,7 +153,7 @@ def generate_mapped_fastq_PE(ref_fasta, sequence_size, insertion_size, coverage)
             list_seq.append(seq)
 
     #Remove empty line if there is
-    list_seq = filter(None, list_seq)
+    list_seq = [_f for _f in list_seq if _f]
     
     # Initialize the 2 lists
     kmers1 = []
@@ -192,7 +192,7 @@ def generate_mapped_fastq_PE(ref_fasta, sequence_size, insertion_size, coverage)
 
 def main():
     if len(sys.argv) == 1 or  sys.argv[1] == '-h':
-        print '''
+        print('''
     fastq_generator
     
     Work with Python2.7
@@ -205,13 +205,13 @@ def main():
 
     functions available: generate_fasta, generate_random_fastq_SE, generate_random_fastq_PE, generate_mapped_fastq_SE, generate_mapped_fastq_PE. 
 
-    For more information for each function, enter function name followed by "-h" (e.g.  python fastq_generator.py generate_fasta -h')'''
+    For more information for each function, enter function name followed by "-h" (e.g.  python fastq_generator.py generate_fasta -h')''')
         sys.exit()
     
     if sys.argv[1] == "generate_fasta":
         #Display help if no argument of "-h"
         if len(sys.argv) == 2 or  sys.argv[2] == '-h':
-            print '''
+            print('''
     generate_fasta creates a de novo fasta file of chosen
     name and size. The sequences are generated randomly.
     
@@ -219,7 +219,7 @@ def main():
     
     arguments:
     name_seq = name of the sequence (string)
-    sequence_size = length of the sequence in bp (integer)'''
+    sequence_size = length of the sequence in bp (integer)''')
             sys.exit()
         else:
             name_seq = str(sys.argv[2])
@@ -238,14 +238,14 @@ def main():
     
     elif sys.argv[1] == "generate_random_fastq_SE":
         if len(sys.argv) == 2 or  sys.argv[2] == '-h':
-            print '''
+            print('''
     generate_random_fastq_SE generates random sets of single-end reads
     
     usage: generate_random_fastq_SE sequence_size nb_seq
                      
     arguments:
     sequence_size = length of the sequence in bp (integer)       
-    nb_seq = number of sequences required (integer)''' 
+    nb_seq = number of sequences required (integer)''') 
             sys.exit()
         else:
             sequence_size = sys.argv[2]
@@ -267,14 +267,14 @@ def main():
  
     elif sys.argv[1] == "generate_random_fastq_PE":
         if len(sys.argv) == 2 or  sys.argv[2] == '-h':
-            print '''
+            print('''
     generate_random_fastq_PE generates random sets of paired-end reads
     
     usage: generate_random_fastq_SE sequence_size nb_seq
                      
     arguments:
     sequence_size = length of the sequence in bp (integer)       
-    nb_seq = number of sequences required (integer)''' 
+    nb_seq = number of sequences required (integer)''') 
             sys.exit()
         else:
             sequence_size = sys.argv[2]
@@ -296,7 +296,7 @@ def main():
      
     elif sys.argv[1] == "generate_mapped_fastq_SE":
         if len(sys.argv) == 2 or  sys.argv[2] == '-h':
-            print '''
+            print('''
     generate_mapped_fastq_SE generates sets of single-end reads from a reference fasta file
     
     usage: generate_mapped_fastq_SE ref_fasta sequence_size coverage
@@ -304,7 +304,7 @@ def main():
     arguments:
     ref_fasta = reference file in fasta format (fasta file)
     sequence_size = length of the sequence in bp (integer)
-    coverage = number of reads covering each bp (integer)'''
+    coverage = number of reads covering each bp (integer)''')
             sys.exit()
         else:
             ref_fasta = sys.argv[2]
@@ -331,7 +331,7 @@ def main():
         
     elif sys.argv[1] == "generate_mapped_fastq_PE":
         if len(sys.argv) == 2 or  sys.argv[2] == '-h':
-            print '''
+            print('''
     generate_mapped_fastq_PE generates sets of paired-end reads from a reference fasta file
     
     usage: generate_mapped_fastq_PE ref_fasta sequence_size  insertion_size coverage
@@ -340,7 +340,7 @@ def main():
     ref_fasta = reference file in fasta format (fasta file)
     sequence_size = length of the sequence in bp (integer)       
     insertion_size = distance between the paired reads in bp (integer)
-    coverage = number of reads covering each bp (integer)'''
+    coverage = number of reads covering each bp (integer)''')
             sys.exit()
         else:
             ref_fasta = sys.argv[2]
