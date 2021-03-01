@@ -2,6 +2,20 @@
 A suite of tools to generate random or mapped fastq files.
 The script is compatible with python2.7 and python3.4.
 
+# Table of content
+- [fastq_generator](#fastq-generator)
+  * [Usage](#usage)
+  * [Generate random fasta files](#generate-random-fasta-files)
+  * [Generate random fastq files with single-end reads](#generate-random-fastq-files-with-single-end-reads)
+  * [Generate random fastq files with paired-end reads](#generate-random-fastq-files-with-paired-end-reads)
+  * [Generate fastq files (SE) mapping on a specified fasta reference](#generate-fastq-files--se--mapping-on-a-specified-fasta-reference)
+  * [Generate fastq files (PE) mapping on a specified fasta reference](#generate-fastq-files--pe--mapping-on-a-specified-fasta-reference)
+  * [Authors](#authors)
+  * [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 ## Usage
 The different functions of fastq_generator are located within one python script.
