@@ -8,14 +8,12 @@ The script is compatible with python2.7 and python3.4.
   * [Generate random fasta files](#generate-random-fasta-files)
   * [Generate random fastq files with single-end reads](#generate-random-fastq-files-with-single-end-reads)
   * [Generate random fastq files with paired-end reads](#generate-random-fastq-files-with-paired-end-reads)
-  * [Generate fastq files (SE) mapping on a specified fasta reference](#generate-fastq-files--se--mapping-on-a-specified-fasta-reference)
-  * [Generate fastq files (PE) mapping on a specified fasta reference](#generate-fastq-files--pe--mapping-on-a-specified-fasta-reference)
+  * [Generate fastq files SE mapping on a specified fasta reference](#generate-fastq-files-se-mapping-on-a-specified-fasta-reference)
+  * [Generate fastq files PE mapping on a specified fasta reference](#generate-fastq-files-pe-mapping-on-a-specified-fasta-reference)
   * [Authors](#authors)
   * [License](#license)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
 
 ## Usage
 The different functions of fastq_generator are located within one python script.
@@ -95,7 +93,7 @@ GGGTATCGTTCGCCACGGAACAGCTATGGGTTACAGCACCTCGGTATTCGCTTCTGCCAGTGGCGCTAATGTAGGAGAAA
 
 ```
 
-## Generate fastq files (SE) mapping on a specified fasta reference
+## Generate fastq files SE mapping on a specified fasta reference
 
 generate_mapped_fastq_SE generates sets of single-end reads from a reference fasta file
 usage: generate_mapped_fastq_SE ref_fasta sequence_size coverage
@@ -129,7 +127,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 ```
 
-## Generate fastq files (PE) mapping on a specified fasta reference
+## Generate fastq files PE mapping on a specified fasta reference
 
 generate_mapped_fastq_PE generates sets of paired-end reads from a reference fasta file
 usage: generate_mapped_fastq_PE ref_fasta sequence_size  insertion_size coverage
