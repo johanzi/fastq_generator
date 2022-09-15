@@ -171,13 +171,15 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 ## Generate reads mapping to the reverse strand
 
+Here I show an example for SE reads but it is the same process for PE reads.
+
 ```
 cat chr1.fa | python reverse_complement.py > chr1_reverse_complement.fa
 
 python fastq_generator.py generate_mapped_fastq_SE chr1_reverse_complement.fa 100 2 > chr1_SE_rc.fastq
 
-# Merge fastq files with reads mapping to both + and - strands
-cat chr1.fastq chr1_SE_rc.fastq > chr1_both_strands.fastq
+# (Optional) Merge fastq files with reads mapping to both + and - strands
+cat chr1_SE.fastq chr1_SE_rc.fastq > chr1_SE_both_strands.fastq
 
 ```
 
