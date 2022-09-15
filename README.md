@@ -4,12 +4,14 @@ The script is compatible with python2.7 and python3.4.
 
 # Table of content
 - [fastq_generator](#fastq-generator)
+- [Table of content](#table-of-content)
   * [Usage](#usage)
   * [Generate random fasta files](#generate-random-fasta-files)
   * [Generate random fastq files with single-end reads](#generate-random-fastq-files-with-single-end-reads)
   * [Generate random fastq files with paired-end reads](#generate-random-fastq-files-with-paired-end-reads)
   * [Generate fastq files SE mapping on a specified fasta reference](#generate-fastq-files-se-mapping-on-a-specified-fasta-reference)
   * [Generate fastq files PE mapping on a specified fasta reference](#generate-fastq-files-pe-mapping-on-a-specified-fasta-reference)
+  * [Generate reads mapping to the reverse strand](#generate-reads-mapping-to-the-reverse-strand)
   * [Authors](#authors)
   * [License](#license)
 
